@@ -1,0 +1,255 @@
+
+/*Defines global css variables*/
+
+:root {
+    --primary-color: #6f9254;
+    --secondary-color: #dabc94;
+    --background-color: beige;
+    --text-color: #000;
+  }
+  
+  /*Applies global border-box sizing*/
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /*HTML Background Color*/
+  
+  html {
+    background-color: var(--primary-color);
+  }
+  
+  /*Styles header element*/
+  
+  header {
+    height: 500px;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /*Styles image within header*/
+  
+  header img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  /*Styles h1 element*/
+  
+  h1 {
+    font-size: 2em;
+    font-family: Cursive, 'Times New Roman', Times, serif;
+  }
+  
+  /*Styles applied to all paragraphs*/
+  
+  p {
+    padding: 10px;
+  }
+  
+  /*Styles navigation bar*/
+  
+  nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+  }
+  
+  /*Styles unordered list within navigation bar*/
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*Styles anchor tags within the nav element*/
+  
+  nav a {
+    display: block;
+    padding: 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /*Styles anchor tags within the nav element when hovered over*/
+  
+  nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+  
+  /*Styles section element*/
+  
+  section {
+    background-color: antiquewhite;
+  }
+  
+  /*Styles applied to all h2 elements*/
+  
+  h2 {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 100%;
+    background-color: var(--primary-color); 
+    border: 5px solid var(--secondary-color);
+  }
+  
+  /*Styles applied to all h3 elements*/
+  
+  h3 {
+    padding: 10px;
+  }
+  
+  /*Styles specific sections with corresponding ID tags*/
+  
+  #about-me, #resume, #projects, #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  /*Specific styles for paragraphs within the about-me and contact sections */
+  
+  #about-me p, #contact p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  
+  /*Specific styles for the anchor element within the h2 element within the resume section*/
+  
+  #resume h2 a {
+    color: black;
+  }
+    
+  /*Styles h2 element within the resume section when hovered over */
+  
+  #resume h2:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+  
+  /*Styles resume-preview section*/
+    
+  .resume-preview {
+    color:black;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /*Styles h3 element within the resume section*/
+    
+  #resume h3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  /*Styles image within the resume section*/
+  
+  #resume img {
+    width: 500px;
+    height: auto;
+    margin-left: 20px;
+  }
+  
+  /*Styles image within the project1 section*/
+  
+  #project1 img {
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid var(--secondary-color);
+  }
+  
+  /*Styles section classed project-grid*/
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  /*Styles spans classed project-title*/
+  
+  .project-title {
+    color:black;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /*Styles images within the project grid section*/
+  
+  .project-grid img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid var(--secondary-color);
+    border-radius: 5px;
+  }
+  
+  /*Styles h2 element specific to the contact section*/
+  
+  #contact h2 {
+    text-align: center;
+    font-size: 2.0rem;
+  }
+  
+  /*Applies style to scroll behavior*/
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /*Responsive layout*/
+  @media only screen and (max-width: 768px) {
+    header {
+      height: 400px;
+    }
+    header img {
+      width: 200px;
+      height: 200px;
+    }
+    .name {
+      font-size: 2rem;
+    }
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    nav a {
+      padding: 10px;
+    }
+    .project-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    #resume img {
+      width: 100%;
+    }
+  }
+  
